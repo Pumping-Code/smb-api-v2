@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { users } from './controllers';
 
 const routes = Router();
 
@@ -32,5 +33,7 @@ routes.get('/list', (req, res, next) => {
 
   res.render('index', { title });
 });
+
+routes.post('/users', users.create);
 
 export default routes;
