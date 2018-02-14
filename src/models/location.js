@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     location: DataTypes.GEOMETRY,
   });
 
-  Location.assocaite = (models) => {
+  Location.associate = (models) => {
     Location.belongsTo(models.User, {
       foreignKey: 'userId',
       onDelete: 'CASCADE',
