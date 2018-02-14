@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { locations, spotrequest, users } from './controllers';
 
 const routes = Router();
 
@@ -32,5 +33,16 @@ routes.get('/list', (req, res, next) => {
 
   res.render('index', { title });
 });
+
+// for debugging / v2
+routes.get('/users', users.list);
+routes.get('/locations', locations.list);
+routes.get('/spot-me', spotrequest.list);
+
+// for v1
+routes.post('/users', users.create);
+routes.post('/locations/:userId', locations.add);
+routes.post('/spot-me', spotrequest.add);
+// routes.post('/spot-me/:id', spotrequest.accept);
 
 export default routes;
