@@ -1,10 +1,10 @@
 import locations from './locations';
-import spotrequest from './spotrequest';
+import spotRequest from './spotRequest';
 import users from './users';
 
 module.exports = {
   locations,
-  spotrequest,
+  spotRequest,
   users,
 };
 
