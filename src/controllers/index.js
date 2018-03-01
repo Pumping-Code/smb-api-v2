@@ -1,5 +1,5 @@
 import locations from './locations';
-import spotRequest from './spotRequest';
+import spotRequest from './spot-request';
 import users from './users';
 
 module.exports = {
