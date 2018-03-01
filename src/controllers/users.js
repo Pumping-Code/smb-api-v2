@@ -1,7 +1,7 @@
 import { User } from '../models';
 
 module.exports = {
-  create(req, res) {
+  add(req, res) {
     return User
       .create({
         fullName: req.body.fullName,
